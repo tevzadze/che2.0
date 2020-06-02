@@ -1,0 +1,309 @@
+.home
+	width: 100%
+	display: flex
+	flex-direction: row
+	margin-top: gem(100)
+	&-main
+		background-image: url(../img/main_photo.jpg)
+		background-repeat: no-repeat
+		background-size: cover
+		width: 50%
+		display: flex
+		flex-direction: column
+		align-items: center
+		height: gem(800)
+		h1
+			margin-top: gem(244)
+			text-align: left
+			width: gem(456)
+			margin-bottom: gem(30)
+		.subtitle
+			font-size: gem(24)
+			line-height: gem(36)
+			color: var(--color-white)
+			font-weight: 400
+			font-family: var(--main-font)
+			width: gem(456)
+			text-align: left
+		&-buttons
+			display: flex
+			flex-direction: row
+			margin-top: gem(130)
+			margin-bottom: gem(150)
+			a:nth-child(2)
+				margin-left: gem(30)
+		&-slider
+			display: flex
+			flex-direction: column
+			justify-content: flex-start
+			align-items: center
+			width: 50%
+			height: gem(800)
+			position: relative
+			.slider
+				display: block
+				width: 100%
+				height: gem(596)
+				img
+					height: gem(596)
+			.customNavigation
+				position: absolute
+				z-index: 9
+				display: flex
+				flex-direction: row
+				justify-content: center
+				bottom: gem(260)
+				left: gem(60)
+				div
+					display: flex
+					justify-content: center
+					align-items: center
+					width: gem(50)
+					height: gem(50)
+					background: #fff
+					transition: all 0.3s ease
+					cursor: pointer
+					&:nth-child(1)
+						margin-right: gem(20)
+						svg
+							transform: rotate(180deg)
+					svg
+
+						path
+							transition: all 0.3s ease
+							fill: var(--color-text)
+					&:hover
+						background: var(--color-coral)
+						svg
+							path
+								fill: var(--color-white)
+			.contact-info
+				display: flex
+				flex-direction: row
+				width: 100%
+				.adress
+					width: 50%
+					display: flex
+					height: gem(204)
+					background: var(--color-coral)
+					flex-direction: row
+					align-items: center
+					justify-content: center
+					&-text
+						p:nth-child(2)
+							margin-top: gem(10)
+					img
+						margin-right: gem(23)
+					p
+						color: #fff
+				.work-time
+					width: 51%
+					display: flex	
+					height: gem(204)		
+					background: var(--color-coral-light)
+					flex-direction: row
+					align-items: center
+					justify-content: center
+					&-text
+						p:nth-child(2)
+							margin-top: gem(10)
+					img
+						margin-right: gem(23)
+					p
+						color: #fff
+.about-section
+	padding-top: gem(120)
+	h2
+		margin-bottom: gem(30)
+		color: var(--color-text)
+	&-main
+		display: flex
+		flex-direction: row
+		justify-content: space-between
+	&-slider
+		width: gem(430)
+		.slidertwo
+			width: gem(430)
+			height: gem(347)
+			img
+				width: 100%
+		.customNavigationtwo
+			position: relative
+			z-index: 9
+			display: flex
+			flex-direction: row
+			justify-content: flex-end
+			right: 0
+			margin-top: gem(10)
+			div
+				display: flex
+				justify-content: center
+				align-items: center
+				width: gem(50)
+				height: gem(50)
+				background: #fff
+				transition: all 0.3s ease
+				cursor: pointer
+				&:nth-child(1)
+					margin-right: gem(20)
+					svg
+						transform: rotate(180deg)
+				svg
+					path
+						transition: all 0.3s ease
+						fill: var(--color-text)
+				&:hover
+					background: var(--color-coral)
+					svg
+						path
+							fill: var(--color-white)
+	&-info
+		.info-about-home
+			width: gem(700)
+			color: var(--color-text)
+			margin-bottom: gem(50)
+		.info-numbers
+			display: flex
+			flex-direction: row
+			justify-content: center
+			margin-top: gem(50)
+			.number
+				border-right: 1px solid #E5E5E5
+				&:last-child
+					border: none
+				p
+					color: var(--color-text)
+					padding: 0 gem(20)
+
+					&:nth-child(1)
+						color: var(--color-coral)
+						margin-bottom: gem(5)
+.operations
+	margin-top: gem(120)
+	h2
+		color: var(--color-text)
+		margin-bottom: gem(30)
+	&-content
+		display: flex
+		flex-direction: row
+		justify-content: space-between
+	&-left
+		width: gem(320)
+		.sidebar
+			display: flex
+			flex-direction: column
+			a
+				color: var(--color-text)
+				display: flex
+				flex-direction: row
+				align-items: center
+				height: gem(45)
+				margin-bottom: gem(10)
+				&:before
+					content: ''
+					display: flex
+					width: gem(0)
+					height: gem(45)
+					background: var(--color-white)
+					margin-right: gem(0)
+					transition: all 0.3s ease
+				&.active
+					&:before
+						display: flex
+						width: gem(18)
+						background: var(--color-coral-light)
+						margin-right: gem(15)
+	.operation
+		display: flex
+		margin-bottom: gem(50)
+		&-info
+			width: gem(300)
+			h3
+				margin-bottom: gem(10)
+			p
+				margin-bottom: gem(50)
+		&-photo
+			width: gem(370)
+			margin-left: gem(50)
+			height: gem(422)
+			img
+				width: 100%
+				height: gem(422)
+.form-section
+	background: var(--color-white)
+	margin-top: gem(60)
+	padding-top: gem(60)
+	padding-bottom: gem(60)
+	h2
+		margin-bottom: gem(30)
+	&-content
+		display: flex
+		flex-direction: row
+		justify-content: space-between
+	&-description
+		width: gem(488)
+		.bold
+			margin-top: gem(40)
+			margin-bottom: gem(30)
+		.list
+			p
+				margin-top: gem(15)
+				display: flex
+				align-items: flex-start
+				position: relative
+				padding-left: gem(35)
+				&:before
+					content: ''
+					display: flex
+					width: gem(15)
+					height: gem(15)
+					background: var(--color-coral-light)
+					position: absolute
+					left: gem(0)
+					margin-top: gem(6)
+	&-form
+		box-shadow: 0px 4px 50px rgba(124, 124, 124, 0.1)
+		display: flex
+		padding: gem(50)
+		h3
+			text-align: center
+			margin-bottom: gem(45)
+		form
+			display: flex
+			flex-direction: column
+			label
+				display: flex
+				flex-direction: column
+				margin-bottom: gem(30)
+				&:nth-child(3)
+					margin-bottom: gem(50)
+				span
+					margin-left: gem(20)
+					color: #B2B7BF
+					margin-bottom: gem(10)
+				input
+					padding: 0 gem(22)
+					height: gem(60)
+					width: gem(400)
+					display: flex
+					align-items: center
+					border: 1px solid #B2B7BF
+					transition: all 0.3s ease
+					outline: none
+					&:focus, &:active
+						border: 1px solid #F13A66
+			button
+				display: flex
+				padding: gem(12) 0
+				justify-content: center
+				background: var(--color-coral)
+				transition: all 0.3s ease
+				width: gem(240)
+				outline: none
+				border: none
+				color: #fff
+				cursor: pointer
+				&:hover
+					background: var(--color-coral-light)
+
+					

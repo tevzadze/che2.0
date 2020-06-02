@@ -1,0 +1,52 @@
+.header
+	top: 0
+	left: 0
+	width: 100%
+	position: fixed
+	display: flex
+	flex-direction: row
+	justify-content: space-between
+	padding: 0 gem(150)
+	align-items: center
+	height: gem(100)
+	background: #fff
+	z-index: 10
+	.menu
+		display: flex
+		position: relative
+		height: gem(100)
+		align-items: center
+		a
+			margin-right: gem(60)
+	a
+		font-weight: 400
+		color: var(--color-text)
+		transition: all 0.3s ease
+		&.active
+			color: var(--color-coral)
+			&:after
+				background: var(--color-coral)
+		&:after
+			content: ''
+			display: flex
+			position: absolute
+			width: gem(75)
+			height: gem(2)
+			background: var(--color-white)
+			bottom: 0
+		&:hover
+			color: var(--color-coral)
+
+	&-right
+		display: flex
+		flex-direction: row
+		.contact-link
+			display: flex
+			align-items: center
+			margin-left: gem(40)
+			img
+				margin-right: gem(20)
+		a
+			font-size: gem(14)
+			line-height: gem(21)
+			font-weight: 400
