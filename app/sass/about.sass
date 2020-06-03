@@ -1,0 +1,106 @@
+.about
+	&-main
+		display: flex
+		margin: gem(150) gem(150) 0 gem(150)
+		&-left
+			display: flex
+			flex-direction: column
+			justify-content: space-between
+			height: gem(637)
+			margin-right: gem(61)
+			&-img
+				display: flex
+				width: gem(530)
+				height: gem(304)
+				img
+					display: flex
+					width: 100%
+		&-right
+			display: flex
+			width: gem(546)
+			flex-direction: column
+			&-top
+				h2
+					margin-bottom: gem(35)
+			&-bottom
+				display: flex
+				&-square
+					display: flex
+					width: gem(274)
+					height: gem(200)
+					align-items: center
+					img
+						width: gem(55)
+						height: gem(55)
+						margin-left: gem(50)
+						margin-right: gem(30)
+					&-text
+						display: flex
+						flex-direction: column
+						width: gem(90)
+						text-align: center
+						height: gem(110)
+						align-items: center
+						margin-top: gem(50)
+						span
+							display: flex
+						span:first-child
+							font-size: gem(48)
+							margin-bottom: gem(20)
+	&-education
+		display: flex
+		margin: gem(75) gem(150) 0 gem(150)
+		flex-direction: column
+		.about-element-main
+			width: gem(710)
+	&-title
+		display: flex
+		margin-bottom: gem(35)
+		margin-top: gem(25)
+		h3
+			padding-bottom: gem(20)
+			border-bottom: gem(3) var(--color-coral-light) solid
+			color: var(--color-text)
+	&-element
+		display: flex
+		width: 100%
+		align-items: flex-end
+		margin-bottom: gem(30)
+		&-data
+			display: flex
+			width: gem(95)
+			margin-right: gem(80)
+		&-main
+			display: flex
+			flex-direction: column
+			span:first-child
+				font-weight: 500
+				color: var(--color-coral-light)
+				margin-bottom: gem(5)
+		&-addition
+			display: flex
+			width: gem(215)
+			justify-content: flex-end
+			span
+				display: flex
+	&-membership
+		display: flex
+		flex-direction: column
+		margin: 0 gem(150) 0 gem(150)
+		&-element
+			display: flex
+			margin-bottom: gem(30)
+			span:first-child
+				margin-right: gem(10)
+	&-internship
+		display: flex
+		flex-direction: column
+		margin: 0 gem(150) 0 gem(150)
+		.about-element-data:last-child
+			margin-bottom: gem(26)
+		.about-element-main
+			width: gem(965)
+	&-courses
+		display: flex
+		flex-direction: column
+		margin: 0 gem(150) gem(70) gem(150)

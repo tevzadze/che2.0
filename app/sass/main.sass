@@ -3,6 +3,8 @@
 @import './common/header.sass'
 @import './home.sass'
 @import '../libs/owl/owl.carousel.min.css'
+@import './about.sass'
+@import './pathology.sass'
 
 *
     box-sizing: border-box
@@ -168,3 +170,54 @@ button[type='submit']
         justify-content: center
         transition: all 0.3s ease
         font-weight: 500
+// footer
+.footer-main
+    display: flex
+    height: gem(451)
+    flex-direction: column
+    padding: gem(100) gem(150)
+    &-top
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        &-left
+            display: flex
+            flex-direction: column
+            height: gem(174)
+            justify-content: space-between
+        &-right
+            display: flex
+            flex-direction: column
+            span
+                margin-bottom: gem(25)
+                color: var(--color-gray-light)
+            &-contacts
+                display: flex
+                flex-direction: column
+                justify-content: space-between
+                height: gem(122)
+                a
+                    color: var(--color-text)
+            &-social
+                display: flex
+                width: gem(120)
+                justify-content: space-between
+                a
+                    display: flex
+                    width: gem(50)
+                    height: gem(50)
+                    img
+                        display: flex
+                        width: 100%
+    &-bottom
+        display: flex
+        justify-content: center
+        align-items: center
+        img
+            display: flex
+            width: gem(15)
+            height: gem(15)
+            margin-right: gem(10)
+        span
+            display: flex
+            color: var(--color-gray-light)
