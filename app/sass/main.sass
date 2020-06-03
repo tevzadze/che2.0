@@ -173,7 +173,6 @@ button[type='submit']
 // footer
 .footer-main
     display: flex
-    height: gem(451)
     flex-direction: column
     padding: gem(100) gem(150)
     &-top
@@ -185,6 +184,10 @@ button[type='submit']
             flex-direction: column
             height: gem(174)
             justify-content: space-between
+            a
+                transition: all 0.3s ease
+                &:hover
+                    color: var(--color-coral)
         &-right
             display: flex
             flex-direction: column
@@ -198,6 +201,9 @@ button[type='submit']
                 height: gem(122)
                 a
                     color: var(--color-text)
+                    transition: all 0.3s ease
+                    &:hover
+                        color: var(--color-coral)
             &-social
                 display: flex
                 width: gem(120)
@@ -213,6 +219,7 @@ button[type='submit']
         display: flex
         justify-content: center
         align-items: center
+        margin-top: gem(50)
         img
             display: flex
             width: gem(15)
