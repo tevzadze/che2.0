@@ -194,7 +194,7 @@
 			flex-direction: column
 			&.fixed
 				position: fixed
-				top: gem(150)
+				top: 14vh
 			a
 				color: var(--color-text)
 				display: flex
@@ -218,9 +218,14 @@
 						margin-right: gem(15)
 	&-right
 		margin-top: gem(90)
+		h2
+			display: none
+			
 	.operation
 		display: flex
 		margin-bottom: gem(50)
+		&.onvew
+			background: #000
 		&-info
 			width: gem(300)
 			h3
@@ -334,7 +339,8 @@
 				top: gem(72)
 				left: gem(327)
 				position: absolute
-				width: gem(75)
+				img
+					width: gem(75)
 		.how-to
 			width: gem(140)
 			height: gem(79)
@@ -371,3 +377,346 @@
 				p:first-child
 					color: var(--color-coral)
 					margin-bottom: gem(10)
+.popup-form
+	position: fixed
+	z-index: 999
+	top: 0
+	left: -100%
+	background: var(--bg-color)
+	width: 100%
+	height: 100vh
+	display: flex
+	justify-content: space-around
+	align-items: center
+	transition: all 0.3s ease
+	&.active
+		left: 0
+	.back
+		position: absolute
+		top: gem(20)
+		right: gem(40)
+		transition: all 0.3s ease
+		cursor: pointer
+		&:hover
+			color: var(--color-coral)
+
+	&-text
+		h2
+			margin-bottom: gem(20)
+		p
+			width: gem(488)
+			margin-bottom: gem(20)
+	.form-section-form
+		background: #fff
+		width: auto
+		display: flex
+@media all and (max-width: 1024px)
+	.header
+		padding: 0 gem(40)
+		height: gem(60)
+		.menu
+			height: gem(60)
+		&-right
+			.contact-link
+				&:first-child
+					display: none
+	.popup-form
+		&-text
+			p
+				width: gem(388)
+	.home
+		margin-top: gem(60)
+	.home-main
+		height: gem(500)
+		&-buttons
+			flex-direction: column
+			margin-bottom: 0
+			margin-top: gem(40)
+			a:nth-child(2)
+				margin-left: 0
+				margin-top: gem(20)
+		h1
+			width: 100%
+			padding-left: gem(15)
+			margin-top: gem(100)
+		.subtitle
+			width: 100%
+			padding-left: gem(20)
+
+		&-slider 
+			.customNavigation
+				left: gem(30)
+				bottom: gem(230)
+			.contact-info 
+				.adress, .work-time
+					height: gem(200)
+					img
+						margin-right: gem(10)
+						margin-left: gem(10)
+			height: gem(500)
+			.slider 
+				height: gem(300)
+				img
+					height: gem(300)
+	.about-section
+		padding-top: gem(80)
+		padding: gem(80) gem(15) gem(0) gem(15)
+		&-main
+			flex-direction: column-reverse
+		h2
+			margin-bottom: gem(15)
+		&-slider
+			display: flex
+			flex-direction: column
+			align-items: center
+			text-align: center
+		
+			width: 100%
+			margin-top: gem(20)
+			.slidertwo
+				width: gem(300)
+				height: gem(247)
+		&-info
+			padding: 0 gem(15)
+			.info-about-home
+				margin-bottom: gem(15)
+			.info-numbers
+				margin-top: gem(20)
+	.operations
+		margin-top: gem(80)
+		&-left
+			display: none
+		&-right
+			margin-top: 0
+			width: 100%
+		.operation
+			// padding: 0 gem(15)
+			justify-content: flex-end
+	.form-section
+		margin-top: gem(10)
+		// padding-left: gem(15)
+		// padding-right: gem(15)
+		&-description
+			padding-left: gem(15)
+		&-form
+			padding: gem(30)
+			margin-right: gem(15)
+			form label input
+				width: gem(300)
+	.contacts 
+		h2
+			margin-left: gem(15)
+			margin-top: gem(80)
+			margin-bottom: gem(30)
+		&-content
+			flex-direction: column
+		&-social
+			justify-content: center
+			&-left
+				margin-left: 0
+				margin: gem(30) gem(100) gem(0) gem(100)
+@media all and (max-width: 480px)
+	.header
+		padding: gem(15)
+		justify-content: space-between
+		z-index: 100
+		.close-menu
+			display: flex
+			flex-direction: column
+			position: relative
+			// top: gem(-5)
+			span
+				width: gem(30)
+				height: gem(1)
+				background: var(--color-coral)
+				position: absolute
+				opacity: 1
+				transition: all 0.3s ease
+				&:nth-child(1)
+					margin-top: gem(-7)
+				&:nth-child(3)
+					margin-top: gem(7)
+				&:nth-child(2)
+					// margin-top: gem(2)
+			&.active
+				// top: 0
+				span
+					&:nth-child(2)
+						background: #fff
+						opacity: 0
+					&:nth-child(1)
+						transform: rotate(45deg)
+						margin-top: 0
+						
+					&:nth-child(3)
+						transform: rotate(-45deg)
+						margin-top: gem(1)
+
+
+
+		&-left
+			display: none
+	.home-main
+		width: 100%
+		h1
+			margin-top: gem(95)
+			width: gem(228)
+			padding-left: 0
+			margin-bottom: 0
+		&-buttons
+			margin-top: gem(52)
+
+		.subtitle
+			margin-top: gem(25)
+			font-size: gem(18)
+			line-height: gem(27)
+			padding-left: 0
+			width: gem(250)
+
+		&-slider
+			display: none
+	.about-section
+		&-info
+			padding: 0
+			.info-about-home
+				width: 100%
+			.info-numbers
+				flex-wrap: wrap
+				.number
+					width: 40%
+					margin-right: gem(30)
+					&:nth-child(2)
+						border: none
+						margin-bottom: gem(20)
+					&:nth-child(1)
+						margin-bottom: gem(20)
+					.title-h2
+						padding: 0
+						font-size: gem(36)
+						line-height: gem(57)
+					.desc-1
+						padding: 0
+						color: #B2B7BF
+						font-size: gem(18)
+						line-height: gem(27)
+
+		&-slider
+			align-items: flex-start 
+			.slidertwo
+				width: 100%
+				height: gem(270)
+	.operations 
+		&-right
+			h2
+				display: flex
+		.operation
+			margin-bottom: gem(10)
+			.title-h3
+				text-decoration: underline var(--color-coral)
+			p, .more-info
+				display: none
+				
+			&.active
+				margin-bottom: gem(30)
+				.title-h3
+					display: flex
+					flex-direction: row
+					text-decoration: none
+					&:before
+						content: ''
+						display: block
+						width: gem(10)
+						height: gem(26)
+						margin-right: gem(10)
+						background: var(--color-coral)
+				p, .more-info
+					display: -webkit-flex
+					display: -moz-flex
+					display: -ms-flex
+					display: -o-flex
+					display: flex
+
+			&-photo
+				display: none
+				
+			&-info
+				width: 100%
+				p
+					margin-bottom: gem(20)
+
+	.form-section
+		margin-top: gem(80)
+		padding-bottom: gem(40)
+		&-content
+			flex-direction: column
+		&-description
+			width: 100%
+			padding: 0
+		&-form
+			margin-right: 0
+			padding: 0
+			width: 100%
+			background: #fff
+			box-shadow: 0px 4px 50px rgba(124, 124, 124, 0)
+			margin-top: gem(35)
+			h3
+				margin-bottom: gem(25)
+			.form
+				width: 100%
+			form 
+				width: 100%
+				label 
+					&:nth-child(3)
+						margin-bottom: gem(25)
+					input
+						width: 100%
+					span
+						margin-left: 0
+	.contacts
+		h2
+			margin-top: gem(30)
+		&-map
+			height: gem(174)
+			.map-dot
+				width: gem(30)
+				left: gem(170)
+				top: gem(-10)
+			.map-line
+				left: gem(185)
+				height: gem(24)
+				top: gem(60)
+			.how-to
+				height: gem(40)
+				width: gem(120)
+				.line
+					width: gem(16)
+					height: gem(40)
+		&-social
+			flex-direction: column
+			&-left
+				margin: gem(0) gem(15)
+				&:first-child
+					margin-top: gem(25)
+					flex-direction: column-reverse
+				&-block
+					margin-bottom: gem(25)
+					.desc-1
+						font-size: gem(18)
+						line-height: gem(27)
+					.desc-2
+						font-size: gem(14)
+						line-height: gem(21)
+					&:nth-child(3)
+						display: none
+					&:nth-child(2)
+						margin-bottom: gem(25)
+	.popup-form
+		background: #fff
+		&-text
+			display: none
+		.form-section-form
+			width: 100%
+			margin: gem(0) gem(15)
+
+	
+						

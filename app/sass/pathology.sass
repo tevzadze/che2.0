@@ -38,3 +38,26 @@
 			img
 				display: flex
 				margin-right: gem(20)
+
+@media all and (max-width: 1024px)				
+	.pathology-main
+		margin: gem(100) gem(15) gem(0) gem(15)
+	.pathology-list
+		margin: gem(45) gem(15) gem(0) gem(15)
+@media all and (max-width: 480px)	
+	.pathology-main
+		h2
+			line-height: gem(36)
+		&-middle
+			position: relative
+			
+			margin-top: gem(25)
+			&-right
+				position: absolute
+				margin-top: gem(90)
+				width: 100%
+				height: gem(230)
+			&-left
+				.more-info
+					margin-top: gem(230)
+				

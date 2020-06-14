@@ -139,11 +139,11 @@ button[type='submit']
     align-items: center
     height: gem(130)
     position: relative
-    width: gem(250)
+    width: gem(260)
     &.hovered
         .plus
             height: gem(50)
-            width: gem(250)
+            width: gem(260)
             img
                 transform: rotate(360deg)
                 opacity: 0
@@ -171,10 +171,14 @@ button[type='submit']
         transition: all 0.3s ease
         font-weight: 500
 // footer
+footer
+    background: var(--bg-color)
+    z-index: 9
 .footer-main
     display: flex
     flex-direction: column
-    padding: gem(100) gem(150)
+    padding: gem(100) gem(150) gem(50) gem(150)
+
     &-top
         display: flex
         flex-direction: row
@@ -228,3 +232,110 @@ button[type='submit']
         span
             display: flex
             color: var(--color-gray-light)
+//mobile-menu
+.mobile-menu
+    position: fixed
+    top: 0
+    left: -100%
+    height: auto
+    min-height: 100vh
+    width: 100%
+    z-index: 99
+    background: #fff
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    transition: all 0.3s ease
+    &.active
+        left: 0
+    
+    .menu
+        display: flex
+        flex-direction: column
+        align-items: center
+        margin-top: gem(120)
+        a
+            color: #323D51
+            font-size: gem(18)
+            line-height: gem(27)
+            margin-bottom: gem(25)
+            &:last-child
+                margin-bottom: 0
+        &-info
+            background: var(--color-coral-light)
+            display: flex
+            width: 100%
+
+            p
+                color: #fff
+            img
+                width: gem(20)
+                margin-right: gem(10)
+            &-left
+                width: 50%
+                display: flex
+                flex-direction: row
+                align-items: flex-start
+                padding: gem(20) gem(15)
+                &:first-child
+                    background: var(--color-coral)
+
+        &-social
+            display: flex
+            align-items: center
+            padding: 0 gem(15)
+            margin-top: gem(90)
+            margin-bottom: gem(25)
+            a
+                display: flex
+                margin-right: gem(5)
+                &:nth-child(2)
+                    margin-right: gem(20)
+                &:nth-child(3)
+                    text-transform: uppercase
+                    font-size: gem(12)
+                    line-height: gem(18)
+                    img
+                        margin-right: gem(8)
+                .social-images
+                    width: gem(30)
+
+@media all and (max-width: 480px)
+
+    .more-info 
+        height: gem(78)
+        .plus
+            width: gem(32)
+            height: gem(78)
+            img
+                width: gem(12)
+        &.hovered
+            .plus
+                width: gem(180)
+        a
+            font-size: gem(18)
+            line-height: gem(27)
+            width: auto
+            margin-left: gem(42)
+
+    .footer-main
+        padding: gem(80) gem(15) gem(35) gem(15)
+        &-top
+            flex-direction: column
+            &-left
+                flex-direction: row
+                height: auto
+                margin-bottom: gem(35)
+            &-right
+                &-contacts
+                    height: auto
+                &-social
+                    position: absolute
+                    right: gem(15)
+                    flex-direction: column
+                    width: auto
+                    margin-top: gem(-10)
+                    a
+                        width: gem(30)
+                        height: gem(30)
+                        margin-bottom: gem(6)

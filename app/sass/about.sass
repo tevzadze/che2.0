@@ -108,3 +108,46 @@
 		display: flex
 		flex-direction: column
 		margin: 0 gem(150) gem(70) gem(150)
+@media all and (max-width: 1024px)
+	.about-main
+		margin: gem(100) gem(15) gem(0) gem(15)
+		&-left
+			display: none
+	.about-education, .about-membership, .about-internship, .about-courses
+		margin: gem(80) gem(15) gem(0) gem(15)
+		// margin-top: gem(80)
+	.about-element-data
+		width: gem(160)
+		margin-right: gem(20)
+@media all and (max-width: 480px)
+	.about-main-right
+		width: 100%
+		h2
+			font-size: gem(24)
+			line-height: gem(36)
+			margin-bottom: gem(25)
+		&-top
+			margin-bottom: gem(20)
+	.about-main-right-bottom-square
+		height: gem(145)
+		img
+			width: gem(29)
+			margin-left: gem(23)
+			margin-right: gem(15)
+		&-text
+			span
+				&:first-child
+					font-size: gem(24)
+					line-height: gem(36)
+					margin-bottom: 0
+	.about-element-addition
+		display: none
+	.about-education .about-element-main
+		width: gem(500)
+	.about-element
+		align-items:  flex-start
+		&-data
+			margin-top: gem(18)
+	.about-courses, .about-education, .about-internship, .about-membership
+		// margin: .8rem .15rem 0 gem(15)
+		margin: gem(50) gem(15) 0 gem(15)
