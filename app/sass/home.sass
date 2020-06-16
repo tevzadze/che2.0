@@ -87,13 +87,16 @@
 					height: gem(204)
 					background: var(--color-coral)
 					flex-direction: row
-					align-items: center
 					justify-content: center
 					&-text
+						margin-top: gem(53)
 						p:nth-child(2)
 							margin-top: gem(10)
 					img
-						margin-right: gem(23)
+						margin-right: gem(17)
+						margin-top: gem(53)
+						width: gem(50)
+						height: gem(50)
 					p
 						color: #fff
 				.work-time
@@ -102,13 +105,15 @@
 					height: gem(204)		
 					background: var(--color-coral-light)
 					flex-direction: row
-					align-items: center
 					justify-content: center
 					&-text
 						p:nth-child(2)
 							margin-top: gem(10)
 					img
 						margin-right: gem(23)
+						margin-top: gem(53)
+						width: gem(50)
+						height: gem(50)
 					p
 						color: #fff
 .about-section
@@ -332,7 +337,7 @@
 			width: gem(720)
 			&-line
 				top: gem(120)
-				left: gem(361)
+				left: gem(362)
 				position: absolute
 				// width: gem(1)
 			&-dot
@@ -412,14 +417,18 @@
 		display: flex
 @media all and (max-width: 1024px)
 	.header
-		padding: 0 gem(40)
+		padding: 0 gem(15)
 		height: gem(60)
 		.menu
 			height: gem(60)
+			a
+				margin-right: gem(60)
 		&-right
 			.contact-link
 				&:first-child
 					display: none
+	.dropbtn
+		margin-right: gem(60)
 	.popup-form
 		&-text
 			p
@@ -520,6 +529,8 @@
 		padding: gem(15)
 		justify-content: space-between
 		z-index: 100
+		.dropdown:first-child
+			display: flex
 		.close-menu
 			display: flex
 			flex-direction: column
@@ -551,6 +562,10 @@
 					&:nth-child(3)
 						transform: rotate(-45deg)
 						margin-top: gem(1)
+		.dropdown
+			position: absolute
+			left: gem(80)
+			top: gem(15)
 
 
 
