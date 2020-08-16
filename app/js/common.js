@@ -65,12 +65,12 @@ $(function() {
             var topRect = currentOperation[i].getBoundingClientRect()
             var topBelow = topRect.top
             var itemHeight = currentOperation[i].offsetHeight
-            var trueHeight = itemHeight + 200
+            var trueHeight = itemHeight + 100
             var currentTitle = document.querySelectorAll('.sidebartitles')
             // console.log(topBelow)
             if (topBelow > 100 && topBelow < trueHeight) {
                 currentTitle[i].classList.add('active')
-            } else if (topBelow > trueHeight || topBelow < 100) {
+            } else if (topBelow > trueHeight || topBelow < 50) {
                 currentTitle[i].classList.remove('active')
             }
         })
@@ -101,14 +101,21 @@ $(function() {
         $('.close-menu').toggleClass('active');
     });
 
-
+$(document).ready(function() {
+ 
+    $('input[type="file"]').change(function(){
+        var value = $("input[type='file']").val();
+        $(this).parents('form').find('.file-text').text(value);
+    });
+ 
+});
 
     
 });
 
     /* When the user clicks on the button,
     toggle between hiding and showing the dropdown content */
-    function buttonToggle() {
+    function myFunction() {
       document.getElementById("myDropdown").classList.toggle("show");
     }
 

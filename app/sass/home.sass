@@ -240,10 +240,10 @@
 		&-photo
 			width: gem(370)
 			margin-left: gem(50)
-			height: gem(422)
+			height: gem(390)
 			img
 				width: 100%
-				height: gem(422)
+				height: gem(390)
 .form-section
 	background: var(--color-white)
 	margin-top: gem(60)
@@ -290,7 +290,40 @@
 				display: flex
 				flex-direction: column
 				margin-bottom: gem(30)
-				&:nth-child(3)
+				&.file
+					display: flex
+					.pseudo-input
+						height: gem(60)
+						width: gem(400)
+						border: 1px solid #B2B7BF
+						transition: all 0.3s ease
+						outline: none
+						display: flex
+						flex-direction: row
+						justify-content: space-between
+						padding: 0 gem(22)
+						align-items: center
+						cursor: pointer
+						p
+							opacity: 0.6
+							transition: 0.3s ease
+						svg
+							width: gem(20)
+							path, polygon
+								fill: var(--color-coral)
+								transition: 0.3s ease
+
+						&:hover
+							p
+								color: #F13A66
+								opacity: 1
+							border: 1px solid #F13A66
+							path, polygon
+								fill: #F13A66
+
+					input
+						display: none
+				&:nth-child(4)
 					margin-bottom: gem(50)
 				span
 					margin-left: gem(20)
@@ -415,6 +448,16 @@
 		background: #fff
 		width: auto
 		display: flex
+.operations_top-line
+	display: flex
+	justify-content: center
+	flex-direction: column
+	align-items: center
+	padding: gem(50) 0
+	p
+		text-align: center
+		margin-top: gem(16)
+
 @media all and (max-width: 1024px)
 	.header
 		padding: 0 gem(15)
@@ -519,6 +562,9 @@
 			margin-right: gem(15)
 			form label input
 				width: gem(300)
+			form label.file .pseudo-input 
+				width: 100%
+
 	.contacts 
 		h2
 			margin-left: gem(15)
