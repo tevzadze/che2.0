@@ -1,3 +1,5 @@
+.mobile-pathology
+	display: none
 .pathology
 	&-main
 		display: flex
@@ -7,6 +9,7 @@
 			margin-bottom: gem(20)
 		h2
 			margin-bottom: gem(20)
+			margin-top: gem(20)
 		&-middle
 			display: flex
 			flex-direction: row
@@ -30,6 +33,8 @@
 				img
 					display: flex
 					width: 100%
+	
+		
 	&-list
 		display: flex
 		flex-direction: column
@@ -39,6 +44,8 @@
 		h3
 			color: var(--color-text)
 			margin-bottom: gem(25)
+		h2
+			margin-top: gem(20)
 		&-element
 			display: flex
 			margin-top: gem(20)
@@ -65,7 +72,14 @@
 				margin-top: gem(180)
 				width: 100%
 				height: unset
+				display: none
+				
 			&-left
 				.more-info
-					margin-top: gem(360)
+					// margin-top: gem(360)
+				p
+					margin-bottom: gem(10)
+	.mobile-pathology
+		display: flex
+		margin-bottom: gem(20)
 				
