@@ -25,8 +25,19 @@
 
 .dropdown
   position: relative
-  display: inline-block
-
+  display: flex
+  select
+    background: var(--color-coral-light) 
+    color: #fff
+    font-size: gem(18)
+    border-radius: gem(3)
+    cursor: pointer
+    border: none
+    padding: gem(5) gem(5)
+    option
+      cursor: pointer
+      &:hover
+        background: var(--color-coral) 
 
 .dropdown-content
   display: none

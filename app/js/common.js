@@ -49,32 +49,34 @@ $(function() {
     var sidebar = document.querySelector('.sidebar')
     var rightOperations = document.querySelector('.operations-right')
     var sidebarLenght = $('.sidebar')
-
+    let header = document.querySelector('header')
+    let headerHeight = header.offsetHeight*2
+    
     if (sidebarLenght.length != 0) {
         this.onscroll = function() {
-        var domRect = rightOperations.getBoundingClientRect();
-        var spaceBelow = domRect.top
+            var domRect = rightOperations.getBoundingClientRect();
+            var spaceBelow = domRect.top
 
-        if (spaceBelow < 250) {
-            sidebar.classList.add('fixed');
-        } else {
-            sidebar.classList.remove('fixed');
-        }
-        var currentOperation = document.querySelectorAll('.operation')
-        currentOperation.forEach(function(item, i, arr) {
-            var topRect = currentOperation[i].getBoundingClientRect()
-            var topBelow = topRect.top
-            var itemHeight = currentOperation[i].offsetHeight
-            var trueHeight = itemHeight + 100
-            var currentTitle = document.querySelectorAll('.sidebartitles')
-            // console.log(topBelow)
-            if (topBelow > 100 && topBelow < trueHeight) {
-                currentTitle[i].classList.add('active')
-            } else if (topBelow > trueHeight || topBelow < 50) {
-                currentTitle[i].classList.remove('active')
+            if (spaceBelow < headerHeight) {
+                sidebar.classList.add('fixed');
+            } else {
+                sidebar.classList.remove('fixed');
             }
-        })
-    };
+            var currentOperation = document.querySelectorAll('.operation')
+            currentOperation.forEach(function(item, i, arr) {
+                var topRect = currentOperation[i].getBoundingClientRect()
+                var topBelow = topRect.top
+                var itemHeight = currentOperation[i].offsetHeight
+                var trueHeight = itemHeight + 100
+                var currentTitle = document.querySelectorAll('.sidebartitles')
+                // console.log(topBelow)
+                if (topBelow > 100 && topBelow < trueHeight) {
+                    currentTitle[i].classList.add('active')
+                } else if (topBelow > trueHeight || topBelow < 50) {
+                    currentTitle[i].classList.remove('active')
+                }
+            })
+        };
     }
     
     $('.sidebartitles').mPageScroll2id();
