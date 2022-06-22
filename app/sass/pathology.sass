@@ -10,6 +10,8 @@
 		h2
 			margin-bottom: gem(20)
 			margin-top: gem(20)
+		ul
+			margin-bottom: gem(20)
 		&-middle
 			display: flex
 			flex-direction: row
@@ -46,13 +48,22 @@
 			margin-bottom: gem(25)
 		h2
 			margin-top: gem(20)
+		
 		&-element
 			display: flex
 			margin-top: gem(20)
 			align-items: center
-			img
-				display: flex
-				margin-right: gem(20)
+			padding-left: gem(30)
+			position: relative
+			&::before
+				display: block
+				content: ''
+				position: absolute
+				background: var(--color-coral)
+				width: gem(15)
+				height: gem(15)
+				left: 0
+				top: gem(7)
 
 @media all and (max-width: 1024px)				
 	.pathology-main
